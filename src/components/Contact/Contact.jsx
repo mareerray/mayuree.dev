@@ -1,7 +1,5 @@
 // =============================================
 // CONTACT COMPONENT
-// 🔁 Replace the email and social links below
-//    with your own real links
 // =============================================
 
 import { useEffect, useRef } from 'react'
@@ -49,39 +47,42 @@ export default function Contact() {
   }, [])
 
   return (
-    <section className={styles.section} id="contact" aria-labelledby="contact-heading">
+<section className={styles.section} id="contact" aria-labelledby="contact-heading">
       <div className="container">
-        <div ref={ref} className="reveal">
-          <p className={styles.eyebrow}>Let's talk</p>
-          <h2 id="contact-heading" className={styles.heading}>Get in touch</h2>
-          <p className={styles.desc}>
-            I'm open to frontend, mobile, and full-stack opportunities across Finland.
-            Feel free to reach out — I'd love to hear from you.
-          </p>
+        <div ref={ref} className={`reveal ${styles.inner}`}>
 
-          {/* 🔁 Replace with your real email */}
-          <a
-            href="mailto:mareerrray@gmail.com"
-            className={styles.emailBtn}
-          >
-            <EmailIcon />
-            mareerrray@gmail.com
-          </a>
+          {/* Left — text content */}
+          <div className={styles.content}>
+            <p className={styles.eyebrow}>Let's talk</p>
+            <h2 id="contact-heading" className={styles.heading}>Get in touch</h2>
+            <p className={styles.desc}>
+              I'm open to frontend, mobile, and full-stack opportunities across Finland.
+              Feel free to reach out — I'd love to hear from you.
+            </p>
 
-          {/* Social links */}
-          <div className={styles.socials}>
-            {/* 🔁 Replace href values with your real profile URLs */}
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub profile">
-              <GitHubIcon />
-              GitHub
+            <a href="mailto:mareerray@gmail.com" className={styles.emailBtn}>
+              <EmailIcon />
+              mareerray@gmail.com
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn profile">
-              <LinkedInIcon />
-              LinkedIn
-            </a>
+
+            <div className={styles.socials}>
+              <a href="https://github.com/mareerray" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub profile">
+                <GitHubIcon />
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/mayuree-reunsati" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn profile">
+                <LinkedInIcon />
+                LinkedIn
+              </a>
+            </div>
           </div>
+
+          {/* Right — logo */}
+          <div className={styles.logoWrap}>
+            <img src="../src/assets/logo.png" alt="DevMayuree logo" className={styles.logo} />
+          </div>
+
         </div>
       </div>
-    </section>
-  )
+    </section>  )
 }

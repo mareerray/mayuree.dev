@@ -1,6 +1,5 @@
 // =============================================
 // PROJECTS COMPONENT
-// This is where you practice the most React!
 //
 // KEY CONCEPTS USED HERE:
 //   useState  — remembers which filter is active
@@ -109,7 +108,7 @@ function ProjectCard({ project }) {
               <ReadMoreIcon /> Read more
             </a>
           )}
-          
+
         </div>
 
       </div>

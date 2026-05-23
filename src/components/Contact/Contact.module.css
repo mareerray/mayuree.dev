@@ -73,6 +73,43 @@
   border-color: var(--color-text-muted);
 }
 
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.logoWrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 320px;
+  max-width: 100%;
+  opacity: 0.9;
+  border-radius: var(--radius-md);
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 160px;
+  }
+}
+
 @media (max-width: 768px) {
   .eyebrow,
   .heading,
