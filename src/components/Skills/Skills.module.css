@@ -1,0 +1,65 @@
+.section {
+  border-top: 1px solid var(--color-divider);
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.heading {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: var(--space-10);
+  letter-spacing: -0.02em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-6);
+}
+
+.group {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.groupLabel {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.badge {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.badge:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}

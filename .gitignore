@@ -1,0 +1,21 @@
+# Dependencies — recreated with "npm install"
+node_modules/
+
+# Vite build output — recreated with "npm run build"
+dist/
+
+# Local environment variables (passwords, API keys)
+.env
+.env.local
+.env.*.local
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Vite cache
+.vite/
