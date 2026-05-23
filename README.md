@@ -3,7 +3,7 @@
 
 Personal portfolio site built with React, Vite, and CSS Modules. Showcasing web and Flutter mobile projects.
 
-🌐 **Live site:** [mayuree.dev](https://mayuree.dev)
+🌐 **Live site:** [mayuree.dev](https://mayuree-dev.vercel.app)
 
 ---
 
@@ -94,4 +94,4 @@ Deployed on **Vercel** with automatic deploys on every push to `main`.
 Graduating from [Gritlab](https://gritlab.ax), Åland, Finland  
 Open to frontend, mobile, and full-stack opportunities across Finland.
 
-[GitHub](https://github.com/mareerray) · [LinkedIn](https://www.linkedin.com/in/mayuree-reunsati) · [mayuree.dev](https://mayuree.dev)
+[GitHub](https://github.com/mareerray) · [LinkedIn](https://www.linkedin.com/in/mayuree-reunsati) · [mayuree.dev](https://mayuree-dev.vercel.app)
