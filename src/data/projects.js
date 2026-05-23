@@ -4,7 +4,6 @@
 // paste it at the top of the array, and edit it.
 // =============================================
 
-
 export const projects = [
   {
     id: 1,
@@ -118,6 +117,31 @@ export const projects = [
   },
   {
     id: 9,
+    title: "ReelTalk Forum",
+    image: "../src/assets/logo.png",
+    description: "A social forum for discussing and sharing content. Built with a modern UI and responsive design.",
+    category: "web",
+    tags: ["React", "Node.js", "MongoDB"],
+    liveUrl: "#",
+    videoUrl: "https://youtube.com/shorts/Aa2chcnAuyw",
+    githubUrl: "https://github.com/mareerray/quiz-app",
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "BizzCard",
+    image: "/images/bizzcard-dark-icon.png",
+    description: "Flutter quiz app with true/false questions across 10 categories. Instant feedback on each answer with a short explanation and final score display.",
+    category: "mobile",
+    tags: ["Flutter", "Dart", "State Management"],
+    liveUrl: "#",
+    videoUrl: "https://youtube.com/shorts/Aa2chcnAuyw",
+    githubUrl: "https://github.com/mareerray/quiz-app",
+    readMoreUrl: "#",
+    featured: false,
+  },
+  {
+    id: 11,
     title: "BitQuiz",
     image: "/images/bitquiz-icon.png",
     description: "Flutter quiz app with true/false questions across 10 categories. Instant feedback on each answer with a short explanation and final score display.",
@@ -127,6 +151,18 @@ export const projects = [
     videoUrl: "https://youtube.com/shorts/Aa2chcnAuyw",
     githubUrl: "https://github.com/mareerray/quiz-app",
     readMoreUrl: "#",
+    featured: false,
+  },
+  {
+    id: 12,
+    title: "Map Markers",
+    image: "../src/assets/logo.png",
+    description: "A social forum for discussing and sharing content. Built with a modern UI and responsive design.",
+    category: "mobile",
+    tags: ["Flutter", "Dart", "SharedPreferences", "Google Maps API"],
+    liveUrl: "#",
+    videoUrl: "https://youtube.com/shorts/Aa2chcnAuyw",
+    githubUrl: "https://github.com/mareerray/map-markers",
     featured: false,
   },
 ];
