@@ -13,7 +13,7 @@ export const projects = [
     tags: ["Flutter", "Go", "WebSockets", "Render"],
     liveUrl: "#",          // 🔁 Replace with your live URL
     githubUrl: "#",        // 🔁 Replace with your GitHub URL
-    featured: true,        // Featured projects appear larger
+    featured: false,        // Featured projects appear larger
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const projects = [
     tags: ["Flutter", "BLoC", "GPS", "CustomPainter"],
     liveUrl: "#",
     githubUrl: "#",
-    featured: true,
+    featured: false,
   },
   {
     id: 3,

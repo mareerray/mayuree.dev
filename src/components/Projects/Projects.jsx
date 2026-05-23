@@ -104,7 +104,7 @@ export default function Projects() {
 
   return (
     <section className={styles.section} id="projects" aria-labelledby="projects-heading">
-      <div className="container--wide">
+      <div className="container">
         <div ref={ref} className="reveal">
           <p className={styles.eyebrow}>Things I have built</p>
           <h2 id="projects-heading" className={styles.heading}>Projects</h2>
@@ -137,3 +137,4 @@ export default function Projects() {
     </section>
   )
 }
+

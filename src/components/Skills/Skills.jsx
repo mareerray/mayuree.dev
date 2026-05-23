@@ -5,24 +5,25 @@
 
 import { useEffect, useRef } from 'react'
 import styles from './Skills.module.css'
+import bgImg from '../../assets/bgimg.jpg'  
 
 // 🔁 Edit these skill groups to match your current portfolio
 const skillGroups = [
   {
     label: 'Frontend',
-    skills: ['React', 'Angular', 'JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'Bootstrap'],
+    skills: ['Angular', 'React', 'JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'Bootstrap'],
   },
   {
     label: 'Mobile',
-    skills: ['Flutter', 'Dart', 'BLoC', 'Google Maps API', 'CustomPainter'],
+    skills: ['Flutter', 'Dart', 'BLoC', 'Provider','Google Maps API', 'Geolocator', 'Sensors', 'Shared Preferences'],
   },
   {
     label: 'Backend & Tools',
-    skills: ['Go', 'Java', 'Spring Boot', 'MongoDB', 'SQLite', 'WebSockets', 'REST APIs'],
+    skills: ['Go', 'Java', 'Spring Boot', 'MongoDB', 'SQLite', 'Supabase','WebSockets', 'REST APIs'],
   },
   {
     label: 'DevOps & Workflow',
-    skills: ['Jenkins', 'SonarQube', 'Git', 'GitHub', 'Vite', 'Vercel', 'Render'],
+    skills: ['Jenkins', 'SonarQube', 'Git', 'GitHub', 'Vite', 'Vercel', 'Render', 'Docker', 'Postman'],
   },
 ]
 
@@ -56,18 +57,22 @@ export default function Skills() {
   }, [])
 
   return (
-    <section className={styles.section} id="skills" aria-labelledby="skills-heading">
-      <div className="container">
-        <div ref={ref} className="reveal">
-          <p className={styles.eyebrow}>What I work with</p>
-          <h2 id="skills-heading" className={styles.heading}>Skills &amp; Technologies</h2>
-          <div className={styles.grid}>
-            {skillGroups.map(group => (
-              <SkillGroup key={group.label} group={group} />
-            ))}
-          </div>
+  <section
+    className={styles.section}
+    id="skills"
+    aria-labelledby="skills-heading"
+    style={{ backgroundImage: `url(${bgImg})` }}
+  >
+    <div className="container">
+      <div className={`${styles.content} reveal`} ref={ref}>   {/* 👈 add styles.content */}
+        <p className={styles.eyebrow}>What I work with</p>
+        <h2 id="skills-heading" className={styles.heading}>Skills &amp; Technologies</h2>
+        <div className={styles.grid}>
+          {skillGroups.map(group => (
+            <SkillGroup key={group.label} group={group} />
+          ))}
         </div>
       </div>
-    </section>
-  )
+    </div>
+  </section>  )
 }

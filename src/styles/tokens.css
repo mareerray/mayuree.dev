@@ -53,7 +53,7 @@
   --font-body:    'Satoshi', 'Inter', sans-serif;
 }
 
-/* ── DARK MODE (default) ── */
+/* ── DARK MODE (default — matches your portfolio) ── */
 [data-theme="dark"], :root {
   --color-bg:              #0f1117;
   --color-surface:         #161b22;
