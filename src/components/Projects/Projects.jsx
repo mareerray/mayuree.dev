@@ -23,6 +23,27 @@ function LinkIcon() {
   )
 }
 
+// Video icon
+function VideoIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+      <polygon points="5 3 19 12 5 21 5 3"/>
+    </svg>
+  )
+}
+
+// Read more icon
+function ReadMoreIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/>
+      <line x1="16" y1="17" x2="8" y2="17"/>
+    </svg>
+  )
+}
+
 // GitHub icon
 function GitHubIcon() {
   return (
@@ -36,35 +57,109 @@ function GitHubIcon() {
 function ProjectCard({ project }) {
   return (
     <article className={`${styles.card} ${project.featured ? styles.featured : ''}`}>
-      {/* Category label */}
-      <span className={styles.category}>{project.category}</span>
 
-      <h3 className={styles.cardTitle}>{project.title}</h3>
-      <p className={styles.cardDesc}>{project.description}</p>
+      {/* Full image on top */}
+      {project.image && (
+        <div className={styles.cardImageWrapper}>
+          <img
+            src={project.image}
+            alt={`${project.title} screenshot`}
+            width="600"
+            height="340"
+            loading="lazy"
+            className={styles.cardImage}
+          />
+        </div>
+      )}
 
-      {/* Tech tags */}
-      <div className={styles.tags}>
-        {project.tags.map(tag => (
-          <span key={tag} className={styles.tag}>{tag}</span>
-        ))}
+      {/* Content below image */}
+      <div className={styles.cardBody}>
+        <span className={styles.category}>{project.category}</span>
+        <h3 className={styles.cardTitle}>{project.title}</h3>
+        <p className={styles.cardDesc}>{project.description}</p>
+
+        <div className={styles.tags}>
+          {project.tags.map(tag => (
+            <span key={tag} className={styles.tag}>{tag}</span>
+          ))}
+        </div>
+
+        <div className={styles.links}>
+          
+          {project.liveUrl && project.liveUrl !== '#' && (
+            <a href={project.liveUrl} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
+              <LinkIcon /> Live demo
+            </a>
+          )}
+
+          {project.videoUrl && project.videoUrl !== '#' && (
+            <a href={project.videoUrl} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
+              <VideoIcon /> Watch demo
+            </a>
+          )}
+
+          {project.githubUrl && project.githubUrl !== '#' && (
+            <a href={project.githubUrl} className={styles.textLink} target="_blank" rel="noopener noreferrer">
+              <GitHubIcon /> GitHub
+            </a>
+          )}
+
+          {project.readMoreUrl && project.readMoreUrl !== '#' && (
+            <a href={project.readMoreUrl} className={styles.textLink} target="_blank" rel="noopener noreferrer">
+              <ReadMoreIcon /> Read more
+            </a>
+          )}
+          
+        </div>
+
       </div>
 
-      {/* Links */}
-      <div className={styles.links}>
-        {project.liveUrl && project.liveUrl !== '#' && (
-          <a href={project.liveUrl} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
-            <LinkIcon /> Live demo
-          </a>
-        )}
-        {project.githubUrl && project.githubUrl !== '#' && (
-          <a href={project.githubUrl} className={styles.linkBtnGhost} target="_blank" rel="noopener noreferrer">
-            <GitHubIcon /> GitHub
-          </a>
-        )}
-      </div>
     </article>
   )
 }
+// function ProjectCard({ project }) {
+//   return (
+//     <article className={`${styles.card} ${project.featured ? styles.featured : ''}`}>
+//       App icon
+//       {project.icon && (
+//         <img
+//           src={project.icon}
+//           alt={`${project.title} icon`}
+//           width="60"
+//           height="60"
+//           className={styles.cardIcon}
+//         />
+//       )}
+
+//       {/* Category label */}
+//       <span className={styles.category}>{project.category}</span>
+
+//       <h3 className={styles.cardTitle}>{project.title}</h3>
+//       <p className={styles.cardDesc}>{project.description}</p>
+
+//       {/* Tech tags */}
+//       <div className={styles.tags}>
+//         {project.tags.map(tag => (
+//           <span key={tag} className={styles.tag}>{tag}</span>
+//         ))}
+//       </div>
+
+//       {/* Links */}
+//       <div className={styles.links}>
+//         {project.liveUrl && project.liveUrl !== '#' && (
+//           <a href={project.liveUrl} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
+//             <LinkIcon /> Live demo
+//           </a>
+//         )}
+//         {project.githubUrl && project.githubUrl !== '#' && (
+//           <a href={project.githubUrl} className={styles.linkBtnGhost} target="_blank" rel="noopener noreferrer">
+//             <GitHubIcon /> GitHub
+//           </a>
+//         )}
+//       </div>
+//     </article>
+//   )
+// }
 
 // Filter button (All / Web / Mobile)
 function FilterButton({ label, active, onClick }) {
