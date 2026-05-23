@@ -118,7 +118,7 @@ export const projects = [
   {
     id: 9,
     title: "ReelTalk Forum",
-    image: "../src/assets/logo.png",
+    image: "/images/logo.png",
     description: "A social forum for discussing and sharing content. Built with a modern UI and responsive design.",
     category: "web",
     tags: ["React", "Node.js", "MongoDB"],
@@ -156,7 +156,7 @@ export const projects = [
   {
     id: 12,
     title: "Map Markers",
-    image: "../src/assets/logo.png",
+    image: "/images/logo.png",
     description: "A social forum for discussing and sharing content. Built with a modern UI and responsive design.",
     category: "mobile",
     tags: ["Flutter", "Dart", "SharedPreferences", "Google Maps API"],

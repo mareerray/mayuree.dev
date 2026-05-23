@@ -79,7 +79,7 @@ export default function Contact() {
 
           {/* Right — logo */}
           <div className={styles.logoWrap}>
-            <img src="../src/assets/mayuree-01.jpg" alt="DevMayuree logo" className={styles.logo} />
+            <img src="/images/mayuree-01.jpg" alt="DevMayuree logo" className={styles.logo} />
           </div>
 
         </div>
