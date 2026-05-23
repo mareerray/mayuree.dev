@@ -1,11 +1,11 @@
 // =============================================
 // HERO COMPONENT
-// Your first impression — name, title, bio, CTAs
-// Edit the text below to match your portfolio
+// First impression — name, title, bio, CTAs
 // =============================================
 
 import { useEffect, useRef } from 'react'
 import styles from './Hero.module.css'
+import profilePhoto from '../../assets/mayuree-01.jpg'
 
 // Teal arrow icon
 function ArrowIcon() {
@@ -40,40 +40,58 @@ export default function Hero() {
   return (
     <section className={styles.section} id="about" aria-labelledby="hero-heading">
       <div className={`container ${styles.inner}`}>
-        <div ref={heroRef} className={`reveal ${styles.content}`}>
 
-          <AvailableBadge />
+        <div className={styles.layout}>
 
-          <h1 id="hero-heading" className={styles.heading}>
-            Mayuree <span className={styles.accent}>Reunsati</span>
-          </h1>
+          {/* LEFT — text */}
+          <div ref={heroRef} className={`reveal ${styles.content}`}>
 
-          <p className={styles.title}>
-            Frontend &amp; Mobile Developer
-          </p>
+            <AvailableBadge />
 
-          {/* 🔁 Edit this bio to match your portfolio */}
-          <p className={styles.bio}>
-            With over a decade of experience in Finnish pharmacies and retail,
-            I bring a service-oriented and detail-driven mindset into software development.
-            I build clean, responsive web and mobile apps — graduating from Gritlab, Åland,
-            open to opportunities across Finland.
-          </p>
+            <h1 id="hero-heading" className={styles.heading}>
+              Mayuree <span className={styles.accent}>Reunsati</span>
+            </h1>
 
-          <div className={styles.ctas}>
-            <a href="#projects" className={styles.btnPrimary}>
-              See my work <ArrowIcon />
-            </a>
-            <a href="#contact" className={styles.btnSecondary}>
-              Get in touch
-            </a>
-          </div>
+            <p className={styles.title}>
+              Frontend &amp; Mobile Developer
+            </p>
 
-        </div>
+            <p className={styles.bio}>
+              With over a decade of experience in Finnish pharmacies and retail,
+              I bring a service-oriented and detail-driven mindset into software development.
+              I build clean, responsive web and mobile apps — graduating from Gritlab, Åland,
+              open to opportunities across Finland.
+            </p>
 
-        {/* Decorative teal glow — subtle background accent */}
+            <div className={styles.ctas}>
+              <a href="#projects" className={styles.btnPrimary}>
+                See my work <ArrowIcon />
+              </a>
+              <a href="#contact" className={styles.btnSecondary}>
+                Get in touch
+              </a>
+            </div>
+
+          </div>  {/* end .content */}
+
+          {/* RIGHT — photo */}
+          <div className={styles.photoWrapper}>
+            <img
+              src={profilePhoto}
+              alt="Mayuree Reunsati"
+              width="340"
+              height="480"
+              loading="lazy"
+              className={styles.photo}
+            />
+          </div>  {/* end .photoWrapper */}
+
+        </div>  {/* end .layout */}
+
+        {/* Decorative teal glow — outside layout, inside inner */}
         <div className={styles.glow} aria-hidden="true" />
-      </div>
+
+      </div>  {/* end .inner */}
     </section>
   )
 }

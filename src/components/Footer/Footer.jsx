@@ -9,7 +9,7 @@ export default function Footer() {
           © {year} Mayuree Reunsati. Built with React.
         </p>
         <p className={styles.note}>
-          Designed &amp; coded by me ✦
+          Designed &amp; coded by Mayuree Reunsati ✦
         </p>
       </div>
     </footer>

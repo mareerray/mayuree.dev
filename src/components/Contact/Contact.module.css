@@ -72,3 +72,20 @@
   color: var(--color-text);
   border-color: var(--color-text-muted);
 }
+
+@media (max-width: 768px) {
+  .eyebrow,
+  .heading,
+  .desc {
+    text-align: center;
+  }
+
+  .emailBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}

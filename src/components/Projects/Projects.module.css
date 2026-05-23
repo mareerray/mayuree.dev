@@ -176,3 +176,16 @@
   color: var(--color-text);
   border-color: var(--color-text-muted);
 }
+
+@media (max-width: 768px) {
+  .eyebrow,
+  .heading,
+  .count {
+    text-align: center;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+}
+

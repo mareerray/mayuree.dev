@@ -6,6 +6,7 @@
 // =============================================
 
 import styles from './Navbar.module.css'
+import logoImg from '../../assets/logo.png'
 
 const navLinks = [
   { label: 'About',    href: '#about' },
@@ -18,11 +19,14 @@ const navLinks = [
 function Logo() {
   return (
     <a href="#" className={styles.logo} aria-label="Mayuree Reunsati — Home">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-        <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
-        <text x="7" y="26" fontFamily="monospace" fontSize="20" fontWeight="700" fill="#0f1117">M</text>
-      </svg>
-      <span className={styles.logoText}>Mayuree</span>
+  <img
+        src={logoImg}
+        alt="Mayuree Reunsati logo"
+        width="36"
+        height="36"
+        className={styles.logoImg}
+      />      
+      <span className={styles.logoText}>DevMayuree</span>
     </a>
   )
 }

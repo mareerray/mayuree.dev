@@ -15,6 +15,10 @@
   height: 64px;
 }
 
+.logoImg {
+  border-radius: var(--radius-sm);  
+}
+
 .logo {
   display: flex;
   align-items: center;
