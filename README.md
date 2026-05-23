@@ -1,76 +1,97 @@
-# My Portfolio — React
 
-A portfolio website built with React + Vite.  
-This is my first React project — converted from a plain HTML portfolio.
+# mayuree.dev — Personal Portfolio
 
-## 🚀 Getting Started
+Personal portfolio site built with React, Vite, and CSS Modules. Showcasing web and Flutter mobile projects.
 
-### 1. Install dependencies
+🌐 **Live site:** [mayuree.dev](https://mayuree.dev)
+
+---
+
+## About This Project
+
+This portfolio was built from scratch as a React learning project — converting a plain HTML/CSS portfolio into a fully component-based React application. It demonstrates real-world React patterns used in professional frontend development.
+
+**Key features:**
+- Component-based architecture with reusable, isolated components
+- Dynamic project filtering by category (All / Web / Mobile) using `useState`
+- Scroll reveal animations using `useEffect` and `IntersectionObserver`
+- Dark / light mode toggle with system preference detection
+- Fully responsive — mobile-first layout from 375px to 1440px+
+- CSS Modules for scoped, collision-free styles per component
+
+---
+
+## Built With
+
+| Technology | Purpose |
+|---|---|
+| [React 18](https://react.dev) | UI component library |
+| [Vite](https://vitejs.dev) | Build tool and dev server |
+| CSS Modules | Scoped component styles |
+| [Fontshare](https://www.fontshare.com) | Cabinet Grotesk + Satoshi fonts |
+
+---
+
+## React Concepts Practiced
+
+This project was intentionally built to practice core React skills that Finnish employers look for:
+
+- `useState` — theme toggle state, active filter state
+- `useEffect` — side effects (scroll animations, DOM updates)
+- `props` — passing data and functions between components
+- `.map()` — rendering lists of project cards from a data array
+- `.filter()` — filtering projects by category
+- CSS Modules — scoped styles, no global class conflicts
+- Component composition — small, focused, reusable components
+
+---
+
+## Project Structure
+
+```
+src/
+├── main.jsx ← App entry point
+├── App.jsx ← Root layout
+├── data/
+│ └── projects.js ← Project data array
+├── styles/
+│ ├── tokens.css ← Design tokens (colors, spacing, type scale)
+│ └── base.css ← Global base styles
+└── components/
+├── Navbar/ ← Sticky nav + dark/light toggle
+├── Hero/ ← Name, title, bio, CTA buttons
+├── Skills/ ← Tech skills grouped by category
+├── Projects/ ← Filterable project cards
+├── Contact/ ← Email + social links
+└── Footer/ ← Copyright
+```
+---
+
+## Getting Started
+
 ```bash
+# Install dependencies
 npm install
-```
 
-### 2. Start the dev server
-```bash
+# Start development server
 npm run dev
-```
-Open http://localhost:5173 in your browser.
 
-### 3. Build for production
-```bash
+# Build for production
 npm run build
 ```
 
 ---
 
-## 📁 Project Structure
+## Deployment
 
-```
-src/
-├── main.jsx              ← App entry point
-├── App.jsx               ← Root layout (add/remove sections here)
-├── data/
-│   └── projects.js       ← 🔁 Edit your project list here
-├── styles/
-│   ├── tokens.css        ← Colors, spacing, font sizes
-│   └── base.css          ← Global base styles
-└── components/
-    ├── Navbar/           ← Navigation + theme toggle
-    ├── Hero/             ← Name, title, intro, CTA buttons
-    ├── Skills/           ← Tech badges grouped by category
-    ├── Projects/         ← Project cards with filter (All/Web/Mobile)
-    ├── Contact/          ← Email + social links
-    └── Footer/           ← Copyright
-```
+Deployed on **Vercel** with automatic deploys on every push to `main`.
 
 ---
 
-## ✏️ How to Edit Content
+## Author
 
-| What to change | Where to find it |
-|---|---|
-| Your projects | `src/data/projects.js` |
-| Hero text / bio | `src/components/Hero/Hero.jsx` |
-| Skills list | `src/components/Skills/Skills.jsx` |
-| Email & social links | `src/components/Contact/Contact.jsx` |
-| Colors / fonts | `src/styles/tokens.css` |
+**Mayuree Reunsati** — Frontend & Mobile Developer  
+Graduating from [Gritlab](https://gritlab.ax), Åland, Finland  
+Open to frontend, mobile, and full-stack opportunities across Finland.
 
----
-
-## 🌐 Deploy to Vercel (free)
-
-1. Push this folder to a GitHub repo
-2. Go to https://vercel.com
-3. Click "Import Project" → select your repo
-4. Click Deploy — done! ✅
-
----
-
-## React Concepts Practiced Here
-
-- `useState` — theme toggle, project filter
-- `useEffect` — scroll reveal animations
-- `props` — passing data to components
-- `.map()` — rendering project cards from data
-- `.filter()` — filtering projects by category
-- CSS Modules — scoped styles per component
+[GitHub](https://github.com/mareerray) · [LinkedIn](https://www.linkedin.com/in/mayuree-reunsati) · [mayuree.dev](https://mayuree.dev)
