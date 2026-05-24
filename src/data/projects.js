@@ -118,13 +118,13 @@ export const projects = [
   {
     id: 9,
     title: "ReelTalk Forum",
-    image: "/images/logo.png",
-    description: "A social forum for discussing and sharing content. Built with a modern UI and responsive design.",
+    image: "/images/reeltalk-forum-01.png",
+    description: "A modern real-time forum with private messaging powered by WebSockets, using Supabase as the database and deployed on Render.",
     category: "web",
     tags: ["Go", "JavaScript", "HTML", "CSS", "Render", "Supabase"],
-    liveUrl: "#",
+    liveUrl: "https://reel-talk-forum.onrender.com/",
     videoUrl: "#",
-    githubUrl: "https://github.com/mareerray/quiz-app",
+    githubUrl: "https://github.com/mareerray/reel-talk-forum-updated",
     featured: false,
   },
   {
